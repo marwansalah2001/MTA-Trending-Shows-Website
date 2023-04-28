@@ -1,17 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.min.js';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import Navbar from './Navbar';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.min.js";
+import Navbar from "./Navbar";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
+import Movies from "./Movies";
+import Tv from "./Tv";
+import Home from "./Home";
 
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Navbar/>
+    <BrowserRouter>
+      <Navbar />
+
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/movies" element={<Movies />}></Route>
+        <Route path="/Tv" element={<Tv />}></Route>
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
