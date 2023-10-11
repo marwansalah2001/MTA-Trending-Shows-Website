@@ -25,7 +25,7 @@ export default class Tv extends Component {
                 <br />
                 To Watch
               </h3>
-              <p className="pc">Most Watched Movies by Days</p>
+              <p className="pc">Most Watched TV Series by Days</p>
               <div className="brd w-100"></div>
             </div>
 
